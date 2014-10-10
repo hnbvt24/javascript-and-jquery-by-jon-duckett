@@ -1,0 +1,306 @@
+@import url(http://fonts.googleapis.com/css?family=Jacques+Francois);
+@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans);
+
+body {
+  background-color: #e2e2e2;
+  color: #fff;
+  margin: 0em;
+  padding: 0em;
+  font-family: 'Jacques Francois', serif;}
+.home {
+    background-color: #979797;}
+header {
+  padding: 1em 0em 2em 0em;
+  background-color: #979797;}
+footer {
+  clear: both;
+  font-family: 'Quattrocento Sans', sans-serif;
+  text-align: center;
+  padding: 2em 0em 1em 0em;}
+
+h1 {
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  margin: 0px auto 0px auto;
+  background-image: url('../img/logo.png');
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;}
+
+h1, h2, h3, h4 {
+    font-weight: normal;}
+h2 {
+  color: #ed8e6c;
+  font-size: 360%;
+  line-height: 1.2em;
+  margin: 0em;}
+h3 {
+  font-size: 90%;
+  letter-spacing: 0.2em;
+  margin: 0px;}
+h4 {
+  color: #999;
+  font-size: 90%;
+  font-family: 'Quattrocento Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;}
+
+p {
+  font-family: 'Quattrocento Sans', sans-serif;
+  line-height: 1.4em;}
+
+p.standfirst { 
+  font-size: 140%;
+  font-family: 'Jacques Francois', serif;}
+
+.home p {
+  width: 300px;
+  float: left;}
+.home p+p, .home ul+p {
+  float: right;}
+
+section.main {
+  background-color: #fff;
+  padding: 2em;
+  min-height: 300px;
+  margin: 0px auto;
+  color: #979797;}
+
+.page {
+  max-width: 940px;
+  margin: 0px auto;
+  clear: both;}
+
+.home .page {
+    max-width: 640px;}
+
+#lower {  max-width: 980px;
+  margin: 0px auto;
+}
+
+.gallery {
+  width: 500px;
+  float: left;}
+.description {
+  width: 360px;
+  padding: 1em;
+  float: left;}
+
+/*****************  Slider ***************/
+
+.slide-viewer {
+    position: relative; /* needed for IE7 */
+    overflow: hidden;
+    height: 300px;}
+
+.slide-group {
+    width: 100%;
+    height: 100%;
+    position: relative;}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;}
+
+.slide:first-child {
+    display: block;}
+
+.slide-buttons {
+  text-align: center;}
+
+.slide-btn {
+  border: none;
+  background: none;
+  color: #000;
+  font-size: 200%;
+  line-height: 0.5em;}
+
+.slide-btn.active, .slide-btn:hover {
+  color: #ed8e6c;
+  cursor: pointer;}
+
+/*****************  No JS ***************/
+#billboard {text-align: center;}
+#billboard img {display: inline-block; margin: 0px auto}
+
+/*****************  Accordion ***************/
+.accordion, .menu {
+  margin: 1em 0em 0em 0em;
+  padding: 0px;
+  float: left;
+  background-color: #f2f2f2;
+  color: #666;}
+
+.accordion li, .menu li {
+  padding: 0px;
+  list-style-type: none;}
+
+.accordion-control {
+  background-color: #303030;
+  color: #fff;
+  clear: both;
+  display: block;
+  padding: 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 300px;
+  border-bottom: 1px solid #666;}
+
+.accordion-panel {
+  display: none;
+  padding: 1em;}
+
+.accordion-panel p {
+  width: 260px;}
+
+.accordion-panel img {
+  display: block;
+  clear: left;
+  margin-top: 0.5em;}
+
+/*****************  Photo viewer ***************/
+#photo-viewer {
+  position: relative;
+  height: 300px;
+  overflow: hidden;}
+
+#photo-viewer.is-loading:after {
+  content: url('../img/load.gif');
+  position: absolute;
+  top: 0;
+  right: 0;}
+
+#photo-viewer img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: 50%;
+  left: 50%;}
+
+.thumb.active {
+  cursor: default;}
+
+#thumbnails {
+	max-width: 100%; 
+	margin: 1em auto 0em auto;
+	text-align: center;}
+
+
+
+/*****************  Tab panel ***************/
+.tab-list {
+  margin: 0px;
+  width: 160px;
+  float: left;}
+
+.tab-list li {
+  float: left;
+  display: inline-block;
+  list-style-type: none;
+  width: 158px;
+        -webkit-transition: background 0.5s linear;
+        -moz-transition: background 0.5s linear;
+        -ms-transition: background 0.5s linear;
+        -o-transition: background 0.5s linear;
+        transition: background 0.5s linear;
+  border-top: 1px solid #e2e2e2;
+  border-left: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  margin-right: 1em;
+  padding: 1em 0em 1em 0em;}
+
+
+.tab-list li.active {
+  background-color: #fff;
+  border-top: 1px solid #d6d6d6;
+  border-left: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+  border-right: #ff0000;
+  z-index: 1000;}
+.tab-list li:hover {
+  background-color: #fff;
+  border-left: 1px solid #d6d6d6;}
+
+
+.tab-list li a {
+  text-decoration: none;
+  padding: 1em;
+  display: block;
+  width: 100px;
+  height: 20px;
+  color: #333;
+  background-color:#f2f2f2;
+  color: #666;
+  border-radius: 110px / 40px;
+  margin-left: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 76%;
+        -webkit-transition: background 0.5s linear;
+        -moz-transition: background 0.5s linear;
+        -ms-transition: background 0.5s linear;
+        -o-transition: background 0.5s linear;
+        transition: background 0.5s linear;
+  line-height: 1.9em;
+  letter-spacing: 0.2em;}
+
+.tab-list li.active a, .tab-list li a:hover {
+  color: #fff;
+  background-color: #666;
+  position: relative;
+  left: -1px;}
+
+.tab-panel {
+    display: none;
+    height: 340px;
+    border-top: 1px solid #d6d6d6;
+    border-left: 1px solid #d6d6d6;
+    border-right: 1px solid #d6d6d6;}
+
+.tab-panel.active  {
+    display: block;
+    float: left;
+    width: 690px;
+    height: 340px;
+    background-color: #fff;
+    border: 1px solid #ff0000;
+    color: #333;}
+
+.tab-panel.active:after{
+   content: url('../img/border-bottom.png');
+   display: block;}
+
+
+
+li.active a {color: #ff0000;}
+
+.tab-panel p {
+  margin: 1em;}
+
+
+.flavor {
+  float: left;
+  width: 33.333%;
+  text-align: center;
+  color: #999;}
+
+.quantity, .submit {
+  background-color: #efefef; 
+  padding: 1em; 
+  margin-top: 1em; 
+  clear: both;}
+.submit {
+  text-align: right;}
+
+input[type=text] {
+  width: 1em;
+  border: 1px solid #d6d6d6;
+  border-radius: 14px;
+  text-align: center;
+  background-color: #efefef;
+  padding: 0.5em;
+  margin: 0.5em;}
